@@ -31,7 +31,7 @@ describe('My First Test', () => {
         });
     
     
-    it.only('Visits the shopsite and buy item', () => {
+    it('Visits the shopsite and buy item', () => {
 
         cy.visit('https://www.saucedemo.com/');
 
