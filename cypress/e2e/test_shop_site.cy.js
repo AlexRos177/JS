@@ -71,21 +71,4 @@ describe('My First Test', () => {
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //Start command => npx cypress open
+//Start command => npx cypress open
