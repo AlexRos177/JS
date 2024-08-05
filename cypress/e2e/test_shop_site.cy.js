@@ -27,8 +27,24 @@ describe('My First Test', () => {
         cy.url().should('include', '/checkout-step-two.html');
         cy.get('[data-test="finish"]').click();
         cy.get('[data-test="back-to-products"]').click();
+        cy.get('#react-burger-menu-btn').click();
+        cy.get('#logout_sidebar_link').contains('Logout').click();
             
         });
+
+    it.only('Visits the shopsite and buy item', () => {
+
+        cy.visit('https://www.saucedemo.com/');
+
+        // Enter the extracted text into the authentication form
+        cy.get('#user-name').type('locked_out_user');
+        cy.get('#password').type('secret_sauce');
+
+        // Submit the form
+        cy.get('#login-button').click();
+
+        // Assert that the login was successful
+        cy.url().should('include', '/inventory.html');
     
     
     it('Visits the shopsite and buy item', () => {
